@@ -36,7 +36,7 @@ export default function Hero() {
           responsive, and user-friendly applications.
         </p>
 
-        <div className="mt-6 flex flex-wrap justify-center gap-4">
+        <div className="mt-6 flex flex-wrap justify-center gap-4"> 
           <Button className="hover:bg-green-400 hover:text-black" asChild>
             <a href="/Shubham_Saini_Resume.pdf" download>
               Download Resume
