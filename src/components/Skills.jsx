@@ -3,52 +3,70 @@ import { Card } from "@/components/ui/card";
 import { skills } from "../data/skills";
 import { motion } from "framer-motion";
 
-const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i) => ({
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  show: {
     opacity: 1,
     y: 0,
-    transition: {
-      delay: i * 0.1,
-      duration: 0.4,
-      ease: "easeOut",
-    },
-  }),
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
 };
 
 export default function Skills() {
   return (
     <div>
-      <h2 id="skills" className="text-3xl font-bold mt-16 mb-8 text-center text-blue-500">
-        Tech Stack
+      <h2
+        id="skills"
+        className="text-2xl font-semibold mt-12 mb-4 text-center md:text-left"
+      >
+        Skills
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
-        {Object.entries(skills).map(([category, skillList], index) => (
+      <motion.div
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        {Object.entries(skills).map(([title, list], index) => (
           <motion.div
-            key={category}
-            custom={index}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={fadeInUp}
+            key={title}
+            variants={cardVariants}
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 200, damping: 15 }}
           >
-            <Card className="bg-gradient-to-br from-gray-800 to-gray-900 text-white rounded-2xl shadow-md hover:shadow-lg p-6 transition">
-              <h3 className="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">
-                {category}
-              </h3>
-              <ul className="space-y-3">
-                {skillList.map(({ name, icon: Icon }) => (
-                  <li key={name} className="flex items-center gap-3">
-                    <Icon className="text-blue-400 text-xl shrink-0" />
-                    <span className="text-sm">{name}</span>
+            <Card className="p-4 bg-gray-800 hover:shadow-lg transition-shadow duration-300">
+              <h3 className="text-lg font-medium mb-3">{title}</h3>
+              <ul className="text-sm space-y-2">
+                {list.map(({ name, logo }) => (
+                  <li
+                    key={name}
+                    className="flex items-center gap-3 hover:translate-x-1 transition-transform duration-200"
+                  >
+                    <img
+                      src={logo}
+                      alt={name}
+                      className="w-6 h-6 object-contain"
+                    />
+                    <span>{name}</span>
                   </li>
                 ))}
               </ul>
             </Card>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }
