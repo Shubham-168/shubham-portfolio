@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 export default function Contact() {
-  return (
+  return ( 
     <motion.div
       id="contact"
       className="mt-16"
