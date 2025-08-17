@@ -38,7 +38,7 @@ export default function Hero() {
 
         <div className="mt-6 flex flex-wrap justify-center gap-4"> 
           <Button className="hover:bg-green-400 hover:text-black" asChild>
-            <a href="/Shubham_Resume.pdf" download>
+            <a href="/Shubham_Latest_Resume.pdf" download>
               Download Resume
             </a>
           </Button>
