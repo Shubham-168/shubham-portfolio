@@ -12,6 +12,13 @@ export const projects = [
     live: "https://jobbyshubham.ccbp.tech",
   },
   {
+    title: "Nxt Watch App – YouTube Clone with Dark Mode",
+    tech: "React.js, Context API, React Router, js-cookie, REST API, Tailwind CSS, Git/GitHub",
+    desc: "The Nxt Watch App is a fully responsive YouTube clone where users can browse, search, and watch videos. It includes features like dark/light mode toggle, authentication using JWT tokens, save/like/dislike videos, and protected routes. Seamlessly integrates with APIs for video data and user actions.\n\nUse this credentials for demo:- \nusername: rahul \npassword: rahul@2021.",
+    live: "https://shubhamwatchnxt.ccbp.tech"
+  },
+
+  {
     title: "Nxt Trendz (E-commerce Clone)",
     tech: "React Router, JWT, REST APIs",
     desc: "Clone of Amazon/Flipkart with login, product list, and detail view.  \n\nUse this credentials for demo:- \nusername: rahul \npassword: rahul@2021.",
