@@ -32,7 +32,13 @@ export default function Projects() {
             viewport={{ once: true }}
             variants={zoomIn}
           >
-            <Card className="p-4 bg-gray-800 text-white rounded-xl shadow-lg hover:shadow-xl transition h-68 flex flex-col justify-between">
+            <Card className="
+                p-4 bg-gray-800 text-white rounded-xl shadow-lg hover:shadow-xl transition
+                flex flex-col justify-between
+                lg:h-68 
+                sm:overflow-y-auto sm:[scrollbar-width:none] sm:[-ms-overflow-style:none] sm:[&::-webkit-scrollbar]:hidden
+              "
+            >
               <div>
                 <h3 className="text-lg font-bold">{title}</h3>
                 <p className="text-sm text-gray-400">{tech}</p>
