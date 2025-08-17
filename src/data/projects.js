@@ -35,10 +35,4 @@ export const projects = [
     desc: "A high-performance e-commerce platform built with React and Redux Toolkit, featuring micro-frontend architecture for scalability. Includes product listing, detailed product pages, state management for cart functionality, and a modern Tailwind-powered UI. Deployed on Vercel for seamless CI/CD and optimized hosting.",
     live: "https://host-product-app.vercel.app/",
   },
-  {
-    title: "Food Munch",
-    tech: "HTML, CSS, Bootstrap",
-    desc: "A fully responsive and visually appealing food website designed with Bootstrap. Features include an elegant homepage with multimedia integration (videos and images), well-structured content layout, and optimized performance across devices. It highlights clean design principles and modern responsive practices.",
-    live: "http://shubhamfood.ccbp.tech",
-  },
 ];
